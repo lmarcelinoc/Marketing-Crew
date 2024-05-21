@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["python", "-m", "pytest"]
